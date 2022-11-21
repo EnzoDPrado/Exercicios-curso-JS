@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios aula 13</title>
+</head>
+<body> 
+    <script>
+        const nome = prompt('digite o seu nome completo:');
+        document.body.innerHTML = `O seu nome é: ${nome}<br>`;
+        //descobrir o tamanho do nome
+        let tamanhoNome = nome.length;
+        document.body.innerHML += `Seu nome tem: ${tamanhoNome} letras<br>`;
+        //Segunda letra do nome
+        let segundaLetraNome = nome.slice(2);
+        document.body.innerHTML += `A segunda letra do seu nome é: ${segundaLetraNome}<br>`;
+        //Primeiro indice do nome
+        let primeiraLetraNome = nome.indexOf(nome);
+        document.body.innerHTML += `O primeiro indice da letra no seu nome é: ${primeiraLetraNome}<br>`;
+        //Ultimo indice do nome
+        let ultimaLetraNome = nome.lastIndexOf(/[a-z]/, tamanhoNome--);
+        document.body.innerHTML += `O ultimo indice da letra do seu nome é: ${ultimaLetraNome}<br>`;
+        //Ultimas três letras 
+        let ultimasTresLetrasNome = nome.slice(tamanhoNome -3, tamanhoNome++);
+        document.body.innerHTML += `As ultimas tres letras do seu nome é: ${ultimasTresLetrasNome}<br>`
+        //Todas as palavras no nome
+        let palavrasNome = nome.split(' ');
+        document.body.innerHTML += `Todas as palavras do seu nome é: ${palavrasNome}`;
+    </script> 
+</body>
+</html>
